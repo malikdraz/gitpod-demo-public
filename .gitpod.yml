@@ -2,8 +2,8 @@ image: gitpod/workspace-full:latest
 
 tasks:
   - name: Starting Go Web App
-    init: go mod tidy
-    command: go run ./...
+    init: go mod init gitpod-demo
+    command: go mod tidy && go run ./cmd/main.go
 ports:
   - name: Webserver listening at...
     port: 8080
