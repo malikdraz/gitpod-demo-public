@@ -1,0 +1,10 @@
+image: gitpod/workspace-full:latest
+
+tasks:
+  - name: Starting Go Web App
+    init: echo 'Starting webserver...'
+    command: go run main.go
+ports:
+  - name: Frontend
+    port: 8080
+    onOpen: open-browser
